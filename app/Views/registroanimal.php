@@ -13,7 +13,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Rampart+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?= base_url('public/styles/estilos.css') ?>">
-	<title>Document</title>
+	<title>Animalandia</title>
 </head>
 
 <body>
@@ -62,26 +62,26 @@
 
 							<div class="mb-3">
 								<label class="form-label fuente2">Nombre:</label>
-								<input type="text" class="form-control fuente2" name="nombre">
+								<input type="text" class="form-control fuente2" id="nombre" name="nombre">
 							</div>
 							<div class="mb-3">
 								<label class="form-label fuente2">Fotografía:</label>
-								<input type="text" class="form-control fuente2" name="foto">
+								<input type="text" class="form-control fuente2" id="foto" name="foto">
 							</div>
 							<div class="mb-3">
 								<label class="form-label fuente2">Edad:</label>
-								<input type="text" class="form-control" name="edad">
+								<input type="text" class="form-control" id="edad" name="edad">
 							</div>
 							<div class="mb-3">
 								<div class="form-floating">
-									<textarea class="form-control fuente2" placeholder="Descripcion" name="descripcion" style="height: 100px"></textarea>
+									<textarea class="form-control fuente2" placeholder="Descripcion" id="descripcion" name="descripcion" style="height: 100px"></textarea>
 									<label class="fuente2" for="floatingTextarea">Descripción de la mascota</label>
 								</div>
 
 							</div>
 							<div class="mb-3">
 								<label class="form-label fuente2">Tipo de mascota:</label>
-								<select class="form-select fuente2" name="tipo">
+								<select class="form-select fuente2" id="tipo" name="tipo">
 									<option class="fuente2" value="1" selected>Perro</option>
 									<option class="fuente2" value="2">Gato</option>
 									<option class="fuente2" value="3">Ave</option>
@@ -108,6 +108,27 @@
 
 		</section>
 	</main>
+	<section>
+	<?php if(session('mensaje')):?>
+		<!-- Modal -->
+		<div class="modal fade" id="modal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header fuente fondo text-white">
+						<h5 class="modal-title ">Animalandia</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body fuente2">
+						<h5><?= session('mensaje')?></h5>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<?php unset($_SESSION['mensaje']); ?>
+		<?php endif ?>
+	</section>
 
 
 
@@ -145,7 +166,7 @@
 
 	</footer>
 
-
+    <script type="module" src="<?= base_url('public/js/lanzarmodal.js') ?>"></script>
 	<script src="https://kit.fontawesome.com/7b642ec699.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

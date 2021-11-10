@@ -63,26 +63,26 @@
 
 							<div class="mb-3">
 								<label class="form-label fuente2">Producto:</label>
-								<input type="text" class="form-control fuente2" name="producto">
+								<input type="text" class="form-control fuente2" id="nombreproducto" name="nombreproducto">
 							</div>
 							<div class="mb-3">
 								<label class="form-label fuente2">Fotografía:</label>
-								<input type="text" class="form-control fuente2" name="foto">
+								<input type="text" class="form-control fuente2" id="foto" name="foto">
 							</div>
 							<div class="mb-3">
 								<label class="form-label fuente2">Precio Unidad:</label>
-								<input type="number" class="form-control fuente2" name="precio">
+								<input type="number" class="form-control fuente2" id="precio" name="precio">
 							</div>
 							<div class="mb-3">
 								<div class="form-floating">
-									<textarea class="form-control fuente2" placeholder="Descripcion" name="descripcion" style="height: 100px"></textarea>
+									<textarea class="form-control fuente2" id="descripcion" placeholder="Descripcion" name="descripcion" style="height: 100px"></textarea>
 									<label for="floatingTextarea" class="fuente2">Descripción</label>
 								</div>
 
 							</div>
 							<div class="mb-3">
 								<label class="form-label fuente2">Tipo de animal:</label>
-								<select class="form-select fuente2" name="tipo">
+								<select class="form-select fuente2" name="tipo" id="tipo">
 									<option class="fuente2" value="1" selected>Perro</option>
 									<option class="fuente2" value="2">Gato</option>
 									<option class="fuente2" value="3">Ave</option>

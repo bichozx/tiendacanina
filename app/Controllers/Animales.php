@@ -18,7 +18,18 @@ class Animales extends BaseController
         $descripcion = $this->request->getPost("descripcion");
         $tipo = $this->request->getPost("tipo");
 
-        //arreglo asociativo
+        //se aplican validaciones
+        if ($this->validate('formularioMascota')) {
+
+            echo ('todo bien apa');
+
+        } else {
+
+            $mensaje = "campos obligatorios ";
+            return redirect()->to(site_url('/animales/registro'))->with('mensaje', $mensaje);
+        }
+
+        /*//arreglo asociativo
         $datos = array(
             "nombre" => $nombre,
             "foto" => $foto,
@@ -27,6 +38,6 @@ class Animales extends BaseController
             "tipo" => $tipo
         );
 
-        print_r($datos);
+        print_r($datos);*/
     }
 }
