@@ -33,10 +33,10 @@
 							<a class="nav-link active fuente" aria-current="page" href="<?= site_url('Home') ?>">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link fuente" href="<?= site_url('Productos') ?>">Registro Productos</a>
+							<a class="nav-link fuente" href="<?= site_url('producto') ?>">Registro Productos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link fuente" href="#">Registro Animales</a>
+							<a class="nav-link fuente" href="<?= site_url('animales') ?>">Registro Animales</a>
 						</li>
 					</ul>
 				</div>
@@ -152,7 +152,7 @@
 
 				<div class="col-12 col-md-4">
 					<h3 class="fw-bold fuente2">Ayudas:</h3>
-					<p class="fuente2>Glosario / Correo remoto / Monitoreo y desempeño de uso del sitio web</p>
+					<p>Glosario / Correo remoto / Monitoreo y desempeño de uso del sitio web</p>
 					<br>
 					<h3 class="fw-bold fuente2">Protección de datos:</h3>
 					<p >Protección de datos personales en el Municipio de Medellín </p>
@@ -164,7 +164,7 @@
 					<i class="fab fa-instagram fa-3x"></i>
 					<i class="fab fa-youtube fa-3x"></i>
 					<br>
-					<p class="mt-4">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
+					<p class="mt-4 fuente2">© 2021 / NIT: 890905211-1 / Código DANE: 05001 / Código Postal: 050015</p>
 
 				</div>
 			</div>
