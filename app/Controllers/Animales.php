@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use  App\Models\MascotaModelo;
+
 class Animales extends BaseController
 {
     public function index(){
@@ -20,8 +22,38 @@ class Animales extends BaseController
 
         //se aplican validaciones
         if ($this->validate('formularioMascota')) {
+            //echo ('todo bien apa');
 
-            echo ('todo bien apa');
+            //echo ('esto casi no funciona');
+            
+            //intentar conectarme a la bd
+            //e insertar datos
+            try {
+                //Sacar una fotocopia de la clase(crear objeto)
+                $modelo=new MascotaModelo();
+
+                //armo el paquete de datos a registrar
+                $datos = array(
+
+                    "nombre"=>$nombre,
+                    "foto"=>$foto,
+                    "edad"=>$edad,
+                    "descripcion"=>$descripcion, 
+                    "tipo"=>$tipo
+                );
+
+                //agrego los datos
+                $modelo->insert($datos);
+
+                //entrego una respuesta
+                $mensaje="Mascota agregada correctamente";
+                return redirect()->to(site_url('/animales/registro'))->with('mensaje', $mensaje);
+
+            } catch (\Exception $error) {
+                //throw $th;
+                $mensaje = $error->getMessage();
+                return redirect()->to(site_url('/animales/registro'))->with('mensaje', $mensaje);
+            }
 
         } else {
 

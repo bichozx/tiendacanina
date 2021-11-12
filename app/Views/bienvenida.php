@@ -85,7 +85,7 @@
 		</div>
 		<div class="row d-flex justify-content-center mt-5 mx-5 mb-5">
 			<div class="col-1">
-				<a href="">
+				<a href=""  data-toggle="collapse" role="button" >
 					<img src="<?= base_url('public/img/dog-icon.png') ?>" alt="icono1" class="img-fluid zoom">
 				</a>
 				<p class="text-center fuente2">perros</p>

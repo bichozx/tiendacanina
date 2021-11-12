@@ -44,33 +44,45 @@
 		</nav>
 	</header>
 	<main>
-
 		<section class="container-fluid">
 			<div class="mt-5 d-flex">
 				<div class="mr-5 d-flex flex-row">
 					<h2 class="fuente2 text-center p-2">PRECIONA PARA REGISTAR EL PRODUCTO &nbsp; <i class="fas fa-arrow-right "></i> </h2>
 				</div>
-
 				<button class=" navbar-toggler mx-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 					<i class="fas fa-paw fa-2x" style="color: #941304"></i>
-
 				</button>
 				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
 					<div class="offcanvas-body">
+						<div class="">
+							<div class="row">
+								<div class="col-12">
+									<button class="btn bg-light"> Inventario
+										<a href=" <?= site_url('/productos/listado') ?>">
+											
+										<h6 class="fuente2"><i class="fas fa-list fa-2x" style="color: #941304"></i></h6>
+											
 
-						<form class="mb-3" action="<?= site_url('/productos/registro/nuevo') ?>" method="POST">
+										</a>
+									</button>
+
+								</div>
+							</div>
+						</div>
+
+						<form class="mb-3 mt-3" action="<?= site_url('/productos/registro/nuevo') ?>" method="POST">
 
 							<div class="mb-3">
-								<label class="form-label fuente2">Producto:</label>
+								<label class="form-label fuente2 ">Producto:</label>
 								<input type="text" class="form-control fuente2" id="nombreproducto" name="nombreproducto">
 							</div>
 							<div class="mb-3">
-								<label class="form-label fuente2">Fotografía:</label>
+								<label class="form-label fuente2 ">Fotografía:</label>
 								<input type="text" class="form-control fuente2" id="foto" name="foto">
 							</div>
-							<div class="mb-3">
-								<label class="form-label fuente2">Precio Unidad:</label>
+							<div class="mb-3 aling-self-center">
+								<label class="form-label fuente2 ">Precio Unidad:</label>
 								<input type="number" class="form-control fuente2" id="precio" name="precio">
 							</div>
 							<div class="mb-3">
@@ -104,6 +116,8 @@
 		<section class="container">
 			<div class="col-12 col-md-5 align-self-end text-center mt-5">
 				<img src="<?= base_url('public/img/tiendaperritos.jpg') ?>" alt="imagen" class="img-fluid w-100">
+				<a href="<?= site_url('/productos/listado') ?>">Inventario</a>
+
 
 			</div>
 
@@ -111,26 +125,30 @@
 
 	</main>
 	<section>
-	<?php if(session('mensaje')):?>
-		<!-- Modal -->
-		<div class="modal fade" id="modal" tabindex="-1">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header fuente fondo text-white">
-						<h5 class="modal-title ">Animalandia</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-					</div>
-					<div class="modal-body fuente2">
-						<h5><?= session('mensaje')?></h5>
-					</div>
+		<?php if (session('mensaje')) : ?>
+			<!-- Modal -->
+			<div class="modal fade" id="modal" tabindex="-1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header fuente fondo text-white">
+							<h5 class="modal-title ">Animalandia</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+						</div>
+						<div class="modal-body fuente2">
+							<h5><?= session('mensaje') ?></h5>
+						</div>
 
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<?php unset($_SESSION['mensaje']); ?>
+			<?php unset($_SESSION['mensaje']); ?>
 		<?php endif ?>
 	</section>
+	<section>
+		<a href=""></a>
+	</section>
+
 
 
 

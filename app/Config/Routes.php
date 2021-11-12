@@ -36,6 +36,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/productos/registro', 'Producto::index');
 $routes->post('/productos/registro/nuevo', 'Producto::registroproducto');
 $routes->get('/productos/listado', 'Producto::buscar');
+$routes->get('/productos/eliminar/(:num)', 'Producto::eliminar/$1');
+$routes->post('/productos/editar/(:num)', 'Producto::editar/$1');
 
 $routes->get('/animales/registro', 'Animales::index');
 $routes->post('/animales/registro/nuevo', 'Animales::registromascota');

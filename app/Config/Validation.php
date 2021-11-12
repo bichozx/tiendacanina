@@ -55,6 +55,17 @@ class Validation
         'tipo' => 'required'
     ];
 
+    public $EditformularioProducto = [
+
+        'nombreproducto' => 'required',
+        'foto' => 'required',
+        'precio' => 'required',
+        'descripcion' => 'required'
+        
+    ];
+
+
+
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
