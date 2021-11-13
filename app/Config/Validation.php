@@ -64,6 +64,14 @@ class Validation
         
     ];
 
+    public $EditarformularioMascota =[
+        
+        'nombre' => 'required',
+        'foto' => 'required',
+        'edad' => 'required',
+        'descripcion' => 'required'
+    ];
+
 
 
     //--------------------------------------------------------------------

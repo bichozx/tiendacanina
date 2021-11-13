@@ -57,6 +57,20 @@
 				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
 					<div class="offcanvas-body">
+					<div class="">
+							<div class="row">
+								<div class="col-12">
+									<button class="btn bg-light"> Inventario
+										<a href=" <?= site_url('/animales/listado') ?>">
+											
+										<h6 class="fuente2"><i class="fas fa-list fa-2x" style="color: #941304"></i></h6>
+											
+
+										</a>
+									</button>
+
+								</div>
+							</div>
 
 						<form class="mb-3" action="<?= site_url('/animales/registro/nuevo') ?>" method="POST">
 

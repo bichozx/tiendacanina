@@ -56,7 +56,7 @@
                             <div class="card-body">
                                 <h3 class="card-title text-center text-white fuente"><?= $producto['nombreproducto'] ?></h3>
                                 <h5 class="card-text text-center fuente2 text-white"> $ <?= $producto['precio'] ?> </h5>
-                                <p class="card-text"><?= $producto['descripcion'] ?></p>
+                                <p class="card-text  text-center fuente2"><?= $producto['descripcion'] ?></p>
                                 <a data-bs-toggle="modal" data-bs-target="#confirmacion<?= $producto["id"] ?>" href="#" class="btn btn-transparent"><i class="fas fa-trash-alt fa-2x" style="color: white"></i></a>
                                 <a data-bs-toggle="modal" data-bs-target="#editar<?= $producto["id"] ?>" href="#" class="btn btn-transparent ml-5 aling-self-center"><i class="fas fa-edit fa-2x" style="color: white"></i></a>
                             </div>
@@ -72,6 +72,7 @@
                                         </div>
                                         <div class="modal-body fuente2">
                                             <p>¿Está suguro de eliminar este producto?</p>
+                                            <p><p><?= $producto["id"] ?></p></p>
 
                                         </div>
                                         <div class="modal-footer">

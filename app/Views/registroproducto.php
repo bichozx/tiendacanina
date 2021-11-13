@@ -116,7 +116,7 @@
 		<section class="container">
 			<div class="col-12 col-md-5 align-self-end text-center mt-5">
 				<img src="<?= base_url('public/img/tiendaperritos.jpg') ?>" alt="imagen" class="img-fluid w-100">
-				<a href="<?= site_url('/productos/listado') ?>">Inventario</a>
+				
 
 
 			</div>
@@ -145,9 +145,7 @@
 			<?php unset($_SESSION['mensaje']); ?>
 		<?php endif ?>
 	</section>
-	<section>
-		<a href=""></a>
-	</section>
+	
 
 
 

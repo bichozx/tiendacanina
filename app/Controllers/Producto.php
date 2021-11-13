@@ -97,6 +97,7 @@ class Producto extends BaseController
 
             //cargar la vista entregando los datos
             return view('listaproductos', $productos);
+            
         } catch (\Exception $error) {
             //throw $th;
             $mensaje = $error->getMessage();
@@ -123,6 +124,7 @@ class Producto extends BaseController
 
             $mensaje = "Exito eliminando producto";
             return redirect()->to(site_url('/productos/registro'))->with('mensaje', $mensaje);
+            
         } catch (\Exception $error) {
             //throw $th;
             $mensaje = $error->getMessage();
@@ -168,6 +170,7 @@ class Producto extends BaseController
                 //entrego una respuesta
                 $mensaje = "Exito Editando el producto";
                 return redirect()->to(site_url('/productos/registro'))->with('mensaje', $mensaje);
+                
             } catch (\Exception $error) {
                 //throw $th;
                 $mensaje = $error->getMessage();
@@ -179,4 +182,6 @@ class Producto extends BaseController
             return redirect()->to(site_url('/productos/registro'))->with('mensaje', $mensaje);
         }
     }
+
+    
 }

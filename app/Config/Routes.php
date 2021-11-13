@@ -41,6 +41,9 @@ $routes->post('/productos/editar/(:num)', 'Producto::editar/$1');
 
 $routes->get('/animales/registro', 'Animales::index');
 $routes->post('/animales/registro/nuevo', 'Animales::registromascota');
+$routes->get('/animales/listado', 'Animales::buscar');
+$routes->get('/animales/eliminaranimales/(:num)', 'animales::eliminarmascota/$1');
+$routes->post('/animales/editaranimales/(:num)', 'animales::editarmascota/$1');
 
 
 /*
